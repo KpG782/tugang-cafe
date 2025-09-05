@@ -1,54 +1,212 @@
 ---
 import logo from '../assets/favicon.png'
 ---  
-  
-  
-  
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-cafe z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16 lg:h-20">
-        <!-- Logo -->
-        <div class="flex items-center space-x-3">
-          <div class="w-8 h-8 lg:w-10 lg:h-10">
-            <!-- Tugang Cafe Flower Logo -->
-            <img src={logo.src} alt="Tugang Cafe Logo" class="w-full h-full object-cover rounded-full shadow-md" />
-          </div>
-          <span style="font-family: var(--font-script);" class="text-xl lg:text-2xl font-semibold text-tugang-primary">Tugang Cafe</span>
-        </div>
 
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#home" class="text-neutral-700 hover:text-tugang-primary transition-colors duration-200 font-medium">Home</a>
-          <a href="#about" class="text-neutral-700 hover:text-tugang-primary transition-colors duration-200 font-medium">About</a>
-          <a href="#menu" class="text-neutral-700 hover:text-tugang-primary transition-colors duration-200 font-medium">Menu</a>
-          <a href="#gallery" class="text-neutral-700 hover:text-tugang-primary transition-colors duration-200 font-medium">Gallery</a>
-          <a href="#contact" class="text-neutral-700 hover:text-tugang-primary transition-colors duration-200 font-medium">Contact</a>
-          <a href="tel:270006233" class="bg-coffee-gradient text-white px-6 py-2 rounded-full hover:shadow-warm transition-all duration-200 font-medium">
-            Order Now
-          </a>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-lg z-50 transition-all duration-500 ease-out border-b border-tugang-primary/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center space-x-3 group transition-all duration-300 hover:scale-105">
+        <div class="w-8 h-8 lg:w-10 lg:h-10 relative">
+          <img src={logo.src} alt="Tugang Cafe Logo" class="w-full h-full object-cover rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-12" />
+          <div class="absolute inset-0 rounded-full bg-gradient-to-r from-tugang-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
+        <span style="font-family: var(--font-script);" class="text-xl lg:text-2xl font-semibold text-tugang-primary group-hover:text-tugang-dark transition-colors duration-300">Tugang Cafe</span>
+      </a>
 
-        <!-- Mobile menu button -->
-        <button class="md:hidden text-tugang-primary p-2" id="mobile-menu-btn">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="nav-link text-neutral-700 hover:text-tugang-primary transition-all duration-300 font-medium relative">Home</a>
+        <a href="#about" class="nav-link text-neutral-700 hover:text-tugang-primary transition-all duration-300 font-medium relative">About</a>
+        <a href="#menu" class="nav-link text-neutral-700 hover:text-tugang-primary transition-all duration-300 font-medium relative">Menu</a>
+        <a href="#gallery" class="nav-link text-neutral-700 hover:text-tugang-primary transition-all duration-300 font-medium relative">Gallery</a>
+        <a href="#contact" class="nav-link text-neutral-700 hover:text-tugang-primary transition-all duration-300 font-medium relative">Contact</a>
+        <a href="tel:270006233" class="bg-gradient-to-r from-tugang-primary to-tugang-dark text-white px-6 py-2.5 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 font-medium flex items-center space-x-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
           </svg>
-        </button>
+          <span>Order Now</span>
+        </a>
       </div>
 
-      <!-- Mobile Navigation -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-          <a href="#home" class="block px-3 py-2 text-neutral-700 hover:text-tugang-primary transition-colors">Home</a>
-          <a href="#about" class="block px-3 py-2 text-neutral-700 hover:text-tugang-primary transition-colors">About</a>
-          <a href="#menu" class="block px-3 py-2 text-neutral-700 hover:text-tugang-primary transition-colors">Menu</a>
-          <a href="#gallery" class="block px-3 py-2 text-neutral-700 hover:text-tugang-primary transition-colors">Gallery</a>
-          <a href="#contact" class="block px-3 py-2 text-neutral-700 hover:text-tugang-primary transition-colors">Contact</a>
-          <a href="tel:270006233" class="block mx-3 mt-3 bg-coffee-gradient text-white px-4 py-2 rounded-full text-center">
-            Order Now
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-tugang-primary p-2 rounded-lg hover:bg-tugang-light/50 transition-all duration-300 transform hover:scale-110" id="mobile-menu-btn">
+        <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="menu-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" id="hamburger"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" id="close" class="hidden"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0" id="mobile-menu">
+      <div class="px-4 pt-4 pb-6 space-y-3 bg-gradient-to-b from-white to-tugang-light/30 border-t border-tugang-primary/20 rounded-b-2xl shadow-lg">
+        <a href="#home" class="mobile-nav-link block px-4 py-3 text-neutral-700 hover:text-tugang-primary transition-all duration-300 rounded-xl hover:bg-tugang-light/50 transform hover:translateX-2">
+          <span class="flex items-center space-x-3">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+            </svg>
+            <span>Home</span>
+          </span>
+        </a>
+        <a href="#about" class="mobile-nav-link block px-4 py-3 text-neutral-700 hover:text-tugang-primary transition-all duration-300 rounded-xl hover:bg-tugang-light/50 transform hover:translateX-2">
+          <span class="flex items-center space-x-3">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+            <span>About</span>
+          </span>
+        </a>
+        <a href="#menu" class="mobile-nav-link block px-4 py-3 text-neutral-700 hover:text-tugang-primary transition-all duration-300 rounded-xl hover:bg-tugang-light/50 transform hover:translateX-2">
+          <span class="flex items-center space-x-3">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>Menu</span>
+          </span>
+        </a>
+        <a href="#gallery" class="mobile-nav-link block px-4 py-3 text-neutral-700 hover:text-tugang-primary transition-all duration-300 rounded-xl hover:bg-tugang-light/50 transform hover:translateX-2">
+          <span class="flex items-center space-x-3">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+            </svg>
+            <span>Gallery</span>
+          </span>
+        </a>
+        <a href="#contact" class="mobile-nav-link block px-4 py-3 text-neutral-700 hover:text-tugang-primary transition-all duration-300 rounded-xl hover:bg-tugang-light/50 transform hover:translateX-2">
+          <span class="flex items-center space-x-3">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+            <span>Contact</span>
+          </span>
+        </a>
+        <div class="pt-3 border-t border-tugang-primary/20">
+          <a href="tel:270006233" class="block bg-gradient-to-r from-tugang-primary to-tugang-dark text-white px-6 py-3 rounded-xl text-center font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+            <span class="flex items-center justify-center space-x-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              <span>Order Now</span>
+            </span>
           </a>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<style>
+  /* Desktop Navigation Link Hover Effects */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background: linear-gradient(90deg, var(--tugang-primary), var(--tugang-dark));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Mobile Menu Animation */
+  .mobile-menu-open {
+    max-height: 400px !important;
+    opacity: 1 !important;
+  }
+
+  /* Stagger Animation for Mobile Menu Items */
+  .mobile-nav-link {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-menu-open .mobile-nav-link {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .mobile-menu-open .mobile-nav-link:nth-child(1) { transition-delay: 0.1s; }
+  .mobile-menu-open .mobile-nav-link:nth-child(2) { transition-delay: 0.15s; }
+  .mobile-menu-open .mobile-nav-link:nth-child(3) { transition-delay: 0.2s; }
+  .mobile-menu-open .mobile-nav-link:nth-child(4) { transition-delay: 0.25s; }
+  .mobile-menu-open .mobile-nav-link:nth-child(5) { transition-delay: 0.3s; }
+
+  /* Navigation Blur Effect on Scroll */
+  .nav-scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger');
+    const closeIcon = document.getElementById('close');
+    const nav = document.querySelector('nav');
+
+    // Mobile menu toggle with smooth animations
+    mobileMenuBtn?.addEventListener('click', function() {
+      const isOpen = mobileMenu?.classList.contains('mobile-menu-open');
+      
+      if (isOpen) {
+        // Close menu
+        mobileMenu?.classList.remove('mobile-menu-open');
+        hamburgerIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+      } else {
+        // Open menu
+        mobileMenu?.classList.add('mobile-menu-open');
+        hamburgerIcon?.classList.add('hidden');
+        closeIcon?.classList.remove('hidden');
+      }
+    });
+
+    // Close mobile menu when clicking on nav links
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileNavLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileMenu?.classList.remove('mobile-menu-open');
+        hamburgerIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+      });
+    });
+
+    // Enhanced scroll effect for navigation
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        nav?.classList.add('nav-scrolled');
+      } else {
+        nav?.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Smooth scrolling for all navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        if (href) {
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  });
+</script>

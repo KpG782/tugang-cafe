@@ -7,6 +7,7 @@ A premium coffee shop website built with Astro, showcasing the finest coffee, mi
 Tugang Cafe is more than just a coffee shop - it's a community hub where every cup represents warmth, quality, and togetherness. Located in the heart of Taguig, we serve premium coffee experiences with a touch of Filipino hospitality.
 
 ### 🎯 Mission
+
 To create a welcoming space where coffee lovers can experience exceptional quality beverages while building meaningful connections with friends, family, and community.
 
 ## 🚀 Project Structure
@@ -74,20 +75,23 @@ All commands are run from the root of the project:
 
 **Location**: PGRC Building lot 4 B2A blk 21 Camia St. Pembo, Taguig, Philippines  
 **Phone**: 270006233  
-**Website**: https://tugang-cafe-2.jimdosite.com  
+**Website**: https://tugang-cafe-2.jimdosite.com
 
 ### 🌐 Social Media
-- Instagram: [@tugangcafe_](https://instagram.com/tugangcafe_)
+
+- Instagram: [@tugangcafe\_](https://instagram.com/tugangcafe_)
 - TikTok: [@tugangcafe](https://tiktok.com/@tugangcafe)
 
 ## 🎨 Design Features
 
 ### Color Palette
+
 - **Primary**: Coffee brown tones (#8B4513, #D2691E)
 - **Secondary**: Warm creams and light browns
 - **Accent**: Golden highlights for premium feel
 
 ### Custom Animations
+
 - **Scroll Animations**: Different effects per section (fade, slide, scale, rotate)
 - **Stagger Effects**: Sequential element animations
 - **Coffee Cursor**: Animated cursor with steam effects
@@ -96,17 +100,20 @@ All commands are run from the root of the project:
 ## 🚀 Getting Started
 
 1. **Clone the repository**
+
    ```sh
    git clone [repository-url]
    cd tugang-cafe
    ```
 
 2. **Install dependencies**
+
    ```sh
    npm install
    ```
 
 3. **Start development server**
+
    ```sh
    npm run dev
    ```
@@ -132,4 +139,4 @@ This project is for Tugang Cafe. All rights reserved.
 
 ---
 
-*Built with ❤️ and ☕ for the Tugang Cafe community*
+_Built with ❤️ and ☕ for the Tugang Cafe community_

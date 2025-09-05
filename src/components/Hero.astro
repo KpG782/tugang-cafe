@@ -1,43 +1,49 @@
 ---
 // Import the hero background image and logo
-import hero1 from '../assets/hero1.jpg'
+import hero1 from '../assets/gallery10.jpg'
 import logo from '../assets/favicon.png'
 ---
 
 <!-- Hero Section -->
 <section id="home" class="min-h-screen relative flex items-center justify-center">
-  <!-- Background Image -->
+  <!-- Background Image with Overlay for Better Contrast -->
   <div class="absolute inset-0">
     <img src={hero1.src} alt="Tugang Cafe Interior" class="w-full h-full object-cover" />
+    <!-- Lighter overlay for better image visibility -->
+    <div class="absolute inset-0 bg-black/20"></div>
   </div>
   
-  <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl">
-    <div class="animate-slide-up">
+  <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
+    <div class="animate-fade-in-up">
       <!-- Hero Logo -->
-      <div class="mb-8 flex justify-center">
-        <div class="w-24 h-24 lg:w-32 lg:h-32 drop-shadow-lg">
-          <img src={logo.src} alt="Tugang Cafe Logo" class="w-full h-full object-cover rounded-full shadow-lg border-4 border-white/20" />
+      <div class="mb-8 flex justify-center animate-logo-bounce">
+        <div class="w-24 h-24 lg:w-32 lg:h-32 drop-shadow-2xl">
+          <img src={logo.src} alt="Tugang Cafe Logo" class="w-full h-full object-cover rounded-full shadow-2xl border-4 border-white/50" />
         </div>
       </div>
       
-      <h1 style="font-family: var(--font-script);" class="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 text-shadow-lg drop-shadow-xl">
+      <h1 style="font-family: var(--font-script);" class="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 text-white animate-slide-in-left" 
+          role="banner"
+          style="text-shadow: 3px 3px 6px rgba(0,0,0,0.8);">
         Tugang Cafe
       </h1>
-      <p class="text-xl lg:text-2xl mb-8 text-shadow-lg max-w-2xl mx-auto font-light drop-shadow-md">
-        Every cup is a celebration of togetherness ☕
+      <p class="text-xl lg:text-2xl mb-8 max-w-2xl mx-auto font-light text-white/95 animate-slide-in-right" 
+         style="text-shadow: 2px 2px 5px rgba(0,0,0,0.9);">
+        Every cup is a celebration of togetherness
       </p>
-      <p class="text-lg lg:text-xl mb-12 text-shadow max-w-3xl mx-auto drop-shadow-md">
+      <p class="text-lg lg:text-xl mb-12 max-w-3xl mx-auto text-white/90 animate-fade-in-up-delay" 
+         style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
         Experience the perfect blend of premium coffee, warm atmosphere, and genuine community in the heart of Taguig
       </p>
       
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-buttons-in">
         <a href="#menu" 
-           class="bg-tugang-light text-tugang-dark px-8 py-4 rounded-full font-semibold hover:bg-white hover:shadow-cafe-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-tugang-accent focus:ring-opacity-50"
+           class="bg-white text-tugang-dark px-8 py-4 rounded-full font-semibold hover:bg-tugang-light hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50 animate-pulse-gentle"
            aria-label="View our menu section">
           View Our Menu
         </a>
         <a href="tel:270006233" 
-           class="border-2 border-tugang-light text-tugang-light bg-tugang-dark bg-opacity-30 px-8 py-4 rounded-full font-semibold hover:bg-tugang-light hover:text-tugang-dark hover:border-tugang-light transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-tugang-accent focus:ring-opacity-50"
+           class="border-2 border-white text-white bg-tugang-primary/80 backdrop-blur-sm px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-tugang-dark hover:border-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50"
            aria-label="Call us to place an order">
           Order Now
         </a>
@@ -45,15 +51,168 @@ import logo from '../assets/favicon.png'
     </div>
   </div>
   
-  <!-- Floating Coffee Elements -->
-  <div class="absolute top-20 left-10 w-4 h-4 rounded-full animate-float opacity-60 shadow-lg" 
-       style="background-color: var(--coffee-cream);"></div>
-  <div class="absolute top-40 right-20 w-3 h-3 rounded-full animate-float opacity-70 shadow-md" 
-       style="background-color: var(--tugang-light); animation-delay: 1s;"></div>
-  <div class="absolute bottom-40 left-20 w-5 h-5 rounded-full animate-float opacity-50 shadow-lg" 
-       style="background-color: var(--tugang-accent); animation-delay: 2s;"></div>
-  <div class="absolute top-1/3 right-10 w-2 h-2 rounded-full animate-float opacity-40 shadow-sm" 
-       style="background-color: var(--coffee-latte); animation-delay: 0.5s;"></div>
-  <div class="absolute bottom-1/3 left-1/4 w-3 h-3 rounded-full animate-float opacity-35 shadow-md" 
-       style="background-color: var(--warm-amber); animation-delay: 1.5s;"></div>
+  <!-- Enhanced Floating Coffee Elements -->
+  <div class="absolute top-20 left-10 w-4 h-4 rounded-full animate-float-1 opacity-60 shadow-lg bg-white"></div>
+  <div class="absolute top-40 right-20 w-3 h-3 rounded-full animate-float-2 opacity-70 shadow-md bg-white"></div>
+  <div class="absolute bottom-40 left-20 w-5 h-5 rounded-full animate-float-3 opacity-50 shadow-lg bg-tugang-light"></div>
+  <div class="absolute top-1/3 right-10 w-2 h-2 rounded-full animate-float-4 opacity-40 shadow-sm bg-white"></div>
+  <div class="absolute bottom-1/3 left-1/4 w-3 h-3 rounded-full animate-float-5 opacity-35 shadow-md bg-tugang-light"></div>
 </section>
+
+<style>
+  /* Enhanced Animations for WCAG Compliance */
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .animate-logo-bounce {
+      animation: logoBounce 2s ease-in-out infinite;
+    }
+
+    .animate-slide-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideInLeft 0.8s ease-out 0.3s forwards;
+    }
+
+    .animate-slide-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      animation: slideInRight 0.8s ease-out 0.6s forwards;
+    }
+
+    .animate-fade-in-up-delay {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out 0.9s forwards;
+    }
+
+    .animate-buttons-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out 1.2s forwards;
+    }
+
+    .animate-pulse-gentle {
+      animation: pulseGentle 3s ease-in-out infinite;
+    }
+
+    .animate-float-1 {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-float-2 {
+      animation: float 8s ease-in-out infinite 1s;
+    }
+
+    .animate-float-3 {
+      animation: float 7s ease-in-out infinite 2s;
+    }
+
+    .animate-float-4 {
+      animation: float 5s ease-in-out infinite 0.5s;
+    }
+
+    .animate-float-5 {
+      animation: float 9s ease-in-out infinite 1.5s;
+    }
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in-up,
+    .animate-slide-in-left,
+    .animate-slide-in-right,
+    .animate-fade-in-up-delay,
+    .animate-buttons-in {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+
+    .animate-logo-bounce,
+    .animate-pulse-gentle,
+    .animate-float-1,
+    .animate-float-2,
+    .animate-float-3,
+    .animate-float-4,
+    .animate-float-5 {
+      animation: none;
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes logoBounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes pulseGentle {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-20px) rotate(120deg);
+    }
+    66% {
+      transform: translateY(10px) rotate(240deg);
+    }
+  }
+
+  /* Enhanced Focus Styles for WCAG */
+  a:focus {
+    outline: 3px solid white;
+    outline-offset: 2px;
+  }
+
+  /* High Contrast Mode Support */
+  @media (prefers-contrast: high) {
+    .text-white {
+      color: white;
+      text-shadow: 3px 3px 6px black;
+    }
+    
+    .bg-black\/20 {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+</style>

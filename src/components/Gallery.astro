@@ -8,98 +8,794 @@ import gallery5 from '../assets/gallery5.jpg'
 import gallery6 from '../assets/gallery6.jpg'
 import gallery7 from '../assets/gallery7.jpg'
 import gallery8 from '../assets/gallery8.jpg'
+import gallery9 from '../assets/gallery9.jpg'
+import gallery10 from '../assets/gallery10.jpg'
 ---
 
 <!-- Gallery Section -->
-<section id="gallery" class="py-20 bg-white">
+<section id="gallery" class="py-20 bg-gradient-to-br from-tugang-light/30 to-white gallery-section">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
+    <div class="text-center mb-16 fade-in">
       <h2 style="font-family: var(--font-serif);" class="text-3xl lg:text-4xl font-bold text-tugang-dark mb-4">Cafe Gallery</h2>
       <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
         Step into our warm and inviting space where every corner tells a story
       </p>
+      <div class="mt-6 flex justify-center">
+        <div class="w-20 h-1 bg-tugang-primary rounded-full"></div>
+      </div>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <!-- Gallery Item 1 - Interior -->
-      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
-        <img src={gallery1.src} alt="Tugang Cafe Interior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div class="text-2xl mb-1">🏪</div>
-          <span style="font-family: var(--font-script);" class="text-sm font-medium">Cozy Interior</span>
+    <!-- Flower/Petal-Inspired Grid Layout -->
+    <div class="gallery-flower">
+      <!-- Center piece - Main focal point -->
+      <div class="gallery-item center-bloom gallery-card-1" data-category="interior">
+        <div class="gallery-card">
+          <img src={gallery1.src} alt="Tugang Cafe Interior" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">🏪</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Heart of Tugang</h3>
+              <p class="gallery-subtitle">Where stories begin</p>
+              <div class="gallery-badge">Center</div>
+            </div>
+          </div>
         </div>
       </div>
       
-      <!-- Gallery Item 2 - Coffee Art -->
-      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
-        <img src={gallery2.src} alt="Latte Art Coffee" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div class="text-2xl mb-1">🎨</div>
-          <span style="font-family: var(--font-script);" class="text-sm font-medium">Latte Art</span>
+      <!-- Top petal -->
+      <div class="gallery-item petal-top gallery-card-2" data-category="coffee">
+        <div class="gallery-card">
+          <img src={gallery2.src} alt="Latte Art Coffee" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">🎨</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Latte Art</h3>
+              <p class="gallery-subtitle">Artistry in every cup</p>
+            </div>
+          </div>
         </div>
       </div>
       
-      <!-- Gallery Item 3 - Barista -->
-      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
-        <img src={gallery3.src} alt="Skilled Barista at Work" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div class="text-2xl mb-1">👨‍🍳</div>
-          <span style="font-family: var(--font-script);" class="text-sm font-medium">Expert Barista</span>
+      <!-- Top-left petal -->
+      <div class="gallery-item petal-top-left gallery-card-11" data-category="atmosphere">
+        <div class="gallery-card">
+          <img src={gallery9.src} alt="Morning Coffee Vibes" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">🌅</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Morning Vibes</h3>
+              <p class="gallery-subtitle">Start fresh every day</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top-left outer petal -->
+      <div class="gallery-item petal-top-left-outer gallery-card-12" data-category="drinks">
+        <div class="gallery-card">
+          <img src={gallery10.src} alt="Specialty Coffee Preparation" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">☕</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Coffee Craft</h3>
+              <p class="gallery-subtitle">Precision in every pour</p>
+            </div>
+          </div>
         </div>
       </div>
       
-      <!-- Gallery Item 4 - Atmosphere -->
-      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
-        <img src={gallery4.src} alt="Warm Cafe Atmosphere" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div class="text-2xl mb-1">✨</div>
-          <span style="font-family: var(--font-script);" class="text-sm font-medium">Perfect Ambiance</span>
+      <!-- Top-right petal -->
+      <div class="gallery-item petal-top-right gallery-card-3" data-category="people">
+        <div class="gallery-card">
+          <img src={gallery3.src} alt="Skilled Barista at Work" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">👨‍🍳</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Expert Barista</h3>
+              <p class="gallery-subtitle">Passion in every brew</p>
+            </div>
+          </div>
         </div>
       </div>
       
-      <!-- Gallery Item 5 - Fresh Pastries -->
-      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
-        <img src={gallery5.src} alt="Fresh Baked Pastries" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div class="text-2xl mb-1">🧁</div>
-          <span style="font-family: var(--font-script);" class="text-sm font-medium">Fresh Treats</span>
+      <!-- Top-right outer petal -->
+      <div class="gallery-item petal-top-right-outer gallery-card-9" data-category="atmosphere">
+        <div class="gallery-card">
+          <img src={gallery3.src} alt="Cafe Morning Atmosphere" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">🌤️</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Golden Hour</h3>
+              <p class="gallery-subtitle">Perfect lighting, perfect moment</p>
+            </div>
+          </div>
         </div>
       </div>
       
-      <!-- Gallery Item 6 - Happy Customers -->
-      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
-        <img src={gallery6.src} alt="Happy Customers Enjoying Coffee" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div class="text-2xl mb-1">😊</div>
-          <span style="font-family: var(--font-script);" class="text-sm font-medium">Happy Moments</span>
+      <!-- Right petal -->
+      <div class="gallery-item petal-right gallery-card-4" data-category="atmosphere">
+        <div class="gallery-card">
+          <img src={gallery4.src} alt="Warm Cafe Atmosphere" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">✨</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Perfect Ambiance</h3>
+              <p class="gallery-subtitle">Warm & welcoming vibes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom-right petal -->
+      <div class="gallery-item petal-bottom-right gallery-card-5" data-category="food">
+        <div class="gallery-card">
+          <img src={gallery5.src} alt="Fresh Baked Pastries" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">🧁</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Fresh Treats</h3>
+              <p class="gallery-subtitle">Baked with love daily</p>
+              <div class="gallery-badge">Popular</div>
+            </div>
+          </div>
         </div>
       </div>
       
-      <!-- Gallery Item 7 - Seating Area -->
-      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
-        <img src={gallery7.src} alt="Comfortable Seating Area" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div class="text-2xl mb-1">🪑</div>
-          <span style="font-family: var(--font-script);" class="text-sm font-medium">Cozy Seating</span>
+      <!-- Bottom-right outer petal -->
+      <div class="gallery-item petal-bottom-right-outer gallery-card-10" data-category="drinks">
+        <div class="gallery-card">
+          <img src={gallery10.src} alt="Specialty Drinks" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">🥤</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Signature Drinks</h3>
+              <p class="gallery-subtitle">Crafted to perfection</p>
+            </div>
+          </div>
         </div>
       </div>
       
-      <!-- Gallery Item 8 - Community -->
-      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
-        <img src={gallery8.src} alt="Community Gathering at Tugang Cafe" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div class="text-2xl mb-1">🤝</div>
-          <span style="font-family: var(--font-script);" class="text-sm font-medium">Community Hub</span>
+      <!-- Bottom petal -->
+      <div class="gallery-item petal-bottom gallery-card-6" data-category="people">
+        <div class="gallery-card">
+          <img src={gallery6.src} alt="Happy Customers Enjoying Coffee" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">😊</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Happy Moments</h3>
+              <p class="gallery-subtitle">Creating memories</p>
+            </div>
+          </div>
         </div>
+      </div>
+      
+      <!-- Bottom-left petal -->
+      <div class="gallery-item petal-bottom-left gallery-card-7" data-category="community">
+        <div class="gallery-card">
+          <img src={gallery8.src} alt="Community Gathering at Tugang Cafe" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">🤝</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Community Hub</h3>
+              <p class="gallery-subtitle">Where connections bloom</p>
+              <div class="gallery-badge">Heart of Taguig</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left petal -->
+      <div class="gallery-item petal-left gallery-card-8" data-category="interior">
+        <div class="gallery-card">
+          <img src={gallery7.src} alt="Comfortable Seating Area" class="gallery-image" />
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <div class="gallery-icon">🪑</div>
+              <h3 style="font-family: var(--font-serif);" class="gallery-title">Cozy Seating</h3>
+              <p class="gallery-subtitle">Your second home</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Stats -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="stat-item fade-in-up stagger-1">
+        <div class="stat-number text-3xl font-bold text-tugang-primary mb-2">1000+</div>
+        <div class="stat-label text-neutral-600">Happy Visitors</div>
+      </div>
+      <div class="stat-item fade-in-up stagger-2">
+        <div class="stat-number text-3xl font-bold text-tugang-primary mb-2">50+</div>
+        <div class="stat-label text-neutral-600">Menu Items</div>
+      </div>
+      <div class="stat-item fade-in-up stagger-3">
+        <div class="stat-number text-3xl font-bold text-tugang-primary mb-2">2+</div>
+        <div class="stat-label text-neutral-600">Years Serving</div>
+      </div>
+      <div class="stat-item fade-in-up stagger-4">
+        <div class="stat-number text-3xl font-bold text-tugang-primary mb-2">100%</div>
+        <div class="stat-label text-neutral-600">Love & Care</div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .gallery-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gallery-flower {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .gallery-flower.animate-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Flower/Petal Layout - Circular arrangement with 10 petals */
+  .center-bloom {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  .petal-top {
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+  }
+
+  .petal-top-left {
+    position: absolute;
+    width: 180px;
+    height: 160px;
+    top: 15%;
+    left: 12%;
+    transform: rotate(-25deg);
+  }
+
+  .petal-top-left-outer {
+    position: absolute;
+    width: 160px;
+    height: 140px;
+    top: 8%;
+    left: 2%;
+    transform: rotate(-45deg);
+  }
+
+  .petal-top-right {
+    position: absolute;
+    width: 180px;
+    height: 160px;
+    top: 15%;
+    right: 12%;
+    transform: rotate(25deg);
+  }
+
+  .petal-top-right-outer {
+    position: absolute;
+    width: 160px;
+    height: 140px;
+    top: 8%;
+    right: 2%;
+    transform: rotate(45deg);
+  }
+
+  .petal-right {
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%) rotate(15deg);
+  }
+
+  .petal-bottom-right {
+    position: absolute;
+    width: 180px;
+    height: 160px;
+    bottom: 15%;
+    right: 12%;
+    transform: rotate(-25deg);
+  }
+
+  .petal-bottom-right-outer {
+    position: absolute;
+    width: 160px;
+    height: 140px;
+    bottom: 8%;
+    right: 2%;
+    transform: rotate(-45deg);
+  }
+
+  .petal-bottom {
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%) rotate(5deg);
+  }
+
+  .petal-bottom-left {
+    position: absolute;
+    width: 180px;
+    height: 160px;
+    bottom: 15%;
+    left: 12%;
+    transform: rotate(25deg);
+  }
+
+  .petal-left {
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%) rotate(-15deg);
+  }
+
+  .gallery-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(139, 69, 19, 0.15);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    border: 3px solid rgba(139, 69, 19, 0.1);
+  }
+
+  .center-bloom .gallery-card {
+    border-radius: 50%;
+    border: 4px solid rgba(139, 69, 19, 0.2);
+    box-shadow: 0 20px 60px rgba(139, 69, 19, 0.2);
+  }
+
+  .gallery-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 25px 50px rgba(139, 69, 19, 0.25);
+    border-color: var(--tugang-primary);
+  }
+
+  .center-bloom .gallery-card:hover {
+    transform: translateY(-15px) scale(1.08);
+    box-shadow: 0 30px 80px rgba(139, 69, 19, 0.3);
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .gallery-card:hover .gallery-image {
+    transform: scale(1.1);
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg, 
+      rgba(139, 69, 19, 0.8) 0%, 
+      rgba(160, 82, 45, 0.6) 50%, 
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .gallery-card:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .gallery-content {
+    text-align: center;
+    color: white;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-card:hover .gallery-content {
+    transform: translateY(0);
+  }
+
+  .gallery-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+
+  .gallery-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .gallery-subtitle {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .gallery-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--tugang-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+  }
+
+  /* Animation Classes */
+  .fade-in, .fade-in-up {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .fade-in-up {
+    transform: translateY(30px);
+  }
+
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+
+  .animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Gallery Card Stagger Animations */
+  .gallery-card-1.animate-in { animation-delay: 0.2s; }
+  .gallery-card-2.animate-in { animation-delay: 0.4s; }
+  .gallery-card-3.animate-in { animation-delay: 0.6s; }
+  .gallery-card-4.animate-in { animation-delay: 0.8s; }
+  .gallery-card-5.animate-in { animation-delay: 1.0s; }
+  .gallery-card-6.animate-in { animation-delay: 1.2s; }
+  .gallery-card-7.animate-in { animation-delay: 1.4s; }
+  .gallery-card-8.animate-in { animation-delay: 1.6s; }
+  .gallery-card-9.animate-in { animation-delay: 1.8s; }
+  .gallery-card-10.animate-in { animation-delay: 2.0s; }
+  .gallery-card-11.animate-in { animation-delay: 2.2s; }
+  .gallery-card-12.animate-in { animation-delay: 2.4s; }
+
+  .gallery-item {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8) rotate(10deg);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .gallery-item.animate-in {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+    animation: petalBloom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  .center-bloom.animate-in {
+    animation: centerBloom 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  @keyframes petalBloom {
+    0% {
+      opacity: 0;
+      transform: translateY(50px) scale(0.8) rotate(10deg);
+    }
+    70% {
+      opacity: 0.8;
+      transform: translateY(-10px) scale(1.05) rotate(-2deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotate(0deg);
+    }
+  }
+
+  @keyframes centerBloom {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.3) rotate(180deg);
+    }
+    60% {
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(1.1) rotate(-10deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+  }
+
+  .stat-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .stat-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .gallery-flower {
+      max-width: 600px;
+      aspect-ratio: 1.1;
+    }
+
+    .center-bloom {
+      width: 200px;
+      height: 200px;
+    }
+
+    .petal-top,
+    .petal-bottom {
+      width: 140px;
+      height: 120px;
+    }
+
+    .petal-top-left,
+    .petal-top-left-outer {
+      width: 120px;
+      height: 100px;
+    }
+
+    .petal-right,
+    .petal-left {
+      width: 140px;
+      height: 120px;
+    }
+
+    .petal-top-right,
+    .petal-bottom-right,
+    .petal-bottom-left {
+      width: 120px;
+      height: 100px;
+    }
+
+    .petal-top-right-outer,
+    .petal-bottom-right-outer {
+      width: 100px;
+      height: 85px;
+    }
+
+    .petal-top { top: 8%; }
+    .petal-bottom { bottom: 8%; }
+    .petal-right { right: 2%; }
+    .petal-left { left: 2%; }
+    .petal-top-right { top: 18%; right: 15%; }
+    .petal-bottom-right { bottom: 18%; right: 15%; }
+    .petal-bottom-left { bottom: 18%; left: 15%; }
+    .petal-top-left { top: 18%; left: 15%; }
+    .petal-top-left-outer { top: 12%; left: 5%; }
+    .petal-top-right-outer { top: 12%; right: 5%; }
+    .petal-bottom-right-outer { bottom: 12%; right: 5%; }
+  }
+
+  @media (max-width: 480px) {
+    .gallery-flower {
+      max-width: 400px;
+      aspect-ratio: 1.2;
+    }
+
+    .center-bloom {
+      width: 140px;
+      height: 140px;
+    }
+
+    .petal-top,
+    .petal-bottom,
+    .petal-right,
+    .petal-left {
+      width: 100px;
+      height: 90px;
+    }
+
+    .petal-top-right,
+    .petal-bottom-right,
+    .petal-bottom-left {
+      width: 85px;
+      height: 75px;
+    }
+
+    .petal-top-left,
+    .petal-top-left-outer {
+      width: 85px;
+      height: 75px;
+    }
+
+    .petal-top-right-outer,
+    .petal-bottom-right-outer {
+      width: 70px;
+      height: 60px;
+    }
+
+    .gallery-title {
+      font-size: 1rem;
+    }
+
+    .gallery-subtitle {
+      font-size: 0.75rem;
+    }
+
+    .gallery-icon {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Intersection Observer for scroll-triggered animations
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const galleryObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains('gallery-flower')) {
+            // Animate the main container first
+            entry.target.classList.add('animate-in');
+            
+            // Then animate each gallery item with stagger
+            const galleryItems = entry.target.querySelectorAll('.gallery-item');
+            galleryItems.forEach(function(item, index) {
+              setTimeout(function() {
+                item.classList.add('animate-in');
+              }, index * 150);
+            });
+            
+            galleryObserver.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observer for other animated elements
+    const generalObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observe the gallery flower container
+    const galleryFlower = document.querySelector('.gallery-flower');
+    if (galleryFlower) {
+      galleryObserver.observe(galleryFlower);
+    }
+
+    // Observe other animated elements
+    const animatedElements = document.querySelectorAll('.fade-in, .fade-in-up, .stat-item');
+    animatedElements.forEach(function(el) {
+      generalObserver.observe(el);
+    });
+
+    // Gallery card click interactions
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    galleryCards.forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        const galleryItem = card.closest('.gallery-item');
+        const category = galleryItem ? galleryItem.getAttribute('data-category') : null;
+        
+        // Add click ripple effect
+        const ripple = document.createElement('div');
+        const rect = card.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        card.appendChild(ripple);
+        
+        setTimeout(function() {
+          ripple.remove();
+        }, 600);
+        
+        console.log('Gallery category clicked: ' + category);
+      });
+    });
+
+    // Counter animation for stats
+    function animateCounter(element) {
+      const target = element.textContent.replace(/[^0-9]/g, '') || '0';
+      const targetNum = parseInt(target);
+      const increment = targetNum / 50;
+      let current = 0;
+      
+      function updateCounter() {
+        if (current < targetNum) {
+          current += increment;
+          const suffix = element.textContent.replace(/[0-9]/g, '').replace(/^\d+/, '') || '';
+          element.textContent = Math.floor(current) + suffix;
+          requestAnimationFrame(updateCounter);
+        } else {
+          const suffix = element.textContent.replace(/[0-9]/g, '').replace(/^\d+/, '') || '';
+          element.textContent = targetNum + suffix;
+        }
+      }
+      
+      updateCounter();
+    }
+
+    // Trigger counter animation when stats come into view
+    const statsObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const counter = entry.target.querySelector('.stat-number');
+          if (counter) {
+            animateCounter(counter);
+          }
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const statItems = document.querySelectorAll('.stat-item');
+    statItems.forEach(function(item) {
+      statsObserver.observe(item);
+    });
+  });
+</script>
+
+<style>
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+  }
+
+  @keyframes ripple-animation {
+    to {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+</style>
