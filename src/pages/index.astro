@@ -1,11 +1,150 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+// src/pages/index.astro
+export const prerender = true
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Import global styles
+import "../styles/global.css"
+import Header from "../components/Header.astro"
+import Hero from "../components/Hero.astro"
+import About from "../components/About.astro"
+import Menu from "../components/Menu.astro"
+import favicon from '../assets/favicon.png';
+import Gallery from "../components/Gallery.astro"
+import Contact from "../components/Contact.astro"
+import Barista from "../components/Barista.astro"
+import Footer from "../components/Footer.astro"
+
+const siteTitle = "Tugang Cafe - Every Cup is a Celebration of Togetherness";
+const siteDescription = "Premium coffee shop in Taguig serving the finest coffee, milk tea, and delicious snacks. Experience warmth and community with every visit.";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{siteTitle}</title>
+  <meta name="description" content={siteDescription} />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href={favicon.src} />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content={siteTitle} />
+  <meta property="og:description" content={siteDescription} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tugangcafe.com" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Tugang Cafe",
+      "description": "Every cup is a celebration of togetherness",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "PGRC Building lot 4 B2A blk 21 Camia St. Pembo",
+        "addressLocality": "Taguig",
+        "addressCountry": "Philippines"
+      },
+      "telephone": "270006233",
+      "url": "https://tugang-cafe-2.jimdosite.com",
+      "sameAs": [
+        "https://instagram.com/tugangcafe_",
+        "https://tiktok.com/@tugangcafe"
+      ]
+    }
+  </script>
+</head>
+
+
+
+<body style="font-family: var(--font-modern);" class="text-neutral-800 bg-tugang-light">
+
+<Header/>
+<Hero/>
+<About/>
+<Menu/>
+<Gallery/>
+<Contact/>
+<Barista/>
+<Footer/>
+
+  
+
+
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+    });
+
+    // Menu category switching
+    const menuTabs = document.querySelectorAll('.menu-tab');
+    const menuCategories = document.querySelectorAll('.menu-category');
+    
+    menuTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const category = tab.getAttribute('data-category');
+        
+        // Update active tab
+        menuTabs.forEach(t => {
+          t.classList.remove('active', 'bg-tugang-primary', 'text-white');
+          t.classList.add('bg-white', 'text-tugang-primary');
+        });
+        tab.classList.add('active', 'bg-tugang-primary', 'text-white');
+        tab.classList.remove('bg-white', 'text-tugang-primary');
+        
+        // Show corresponding category
+        menuCategories.forEach(cat => {
+          cat.classList.add('hidden');
+        });
+        document.getElementById(category)?.classList.remove('hidden');
+      });
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Close mobile menu if open
+          mobileMenu?.classList.add('hidden');
+        }
+      });
+    });
+
+    // Form submission (basic handling)
+    document.querySelector('form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      this.reset();
+    });
+
+    // Add scroll effect to navigation
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav?.classList.add('backdrop-blur-md');
+      } else {
+        nav?.classList.remove('backdrop-blur-md');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+---
+// Import gallery images
+import gallery1 from '../assets/gallery1.jpg'
+import gallery2 from '../assets/gallery2.jpg'
+import gallery3 from '../assets/gallery3.jpg'
+import gallery4 from '../assets/gallery4.jpg'
+import gallery5 from '../assets/gallery5.jpg'
+import gallery6 from '../assets/gallery6.jpg'
+import gallery7 from '../assets/gallery7.jpg'
+import gallery8 from '../assets/gallery8.jpg'
+---
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 style="font-family: var(--font-serif);" class="text-3xl lg:text-4xl font-bold text-tugang-dark mb-4">Cafe Gallery</h2>
+      <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+        Step into our warm and inviting space where every corner tells a story
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- Gallery Item 1 - Interior -->
+      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
+        <img src={gallery1.src} alt="Tugang Cafe Interior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="text-2xl mb-1">🏪</div>
+          <span style="font-family: var(--font-script);" class="text-sm font-medium">Cozy Interior</span>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 2 - Coffee Art -->
+      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
+        <img src={gallery2.src} alt="Latte Art Coffee" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="text-2xl mb-1">🎨</div>
+          <span style="font-family: var(--font-script);" class="text-sm font-medium">Latte Art</span>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 3 - Barista -->
+      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
+        <img src={gallery3.src} alt="Skilled Barista at Work" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="text-2xl mb-1">👨‍🍳</div>
+          <span style="font-family: var(--font-script);" class="text-sm font-medium">Expert Barista</span>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 4 - Atmosphere -->
+      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
+        <img src={gallery4.src} alt="Warm Cafe Atmosphere" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="text-2xl mb-1">✨</div>
+          <span style="font-family: var(--font-script);" class="text-sm font-medium">Perfect Ambiance</span>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 5 - Fresh Pastries -->
+      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
+        <img src={gallery5.src} alt="Fresh Baked Pastries" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="text-2xl mb-1">🧁</div>
+          <span style="font-family: var(--font-script);" class="text-sm font-medium">Fresh Treats</span>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 6 - Happy Customers -->
+      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
+        <img src={gallery6.src} alt="Happy Customers Enjoying Coffee" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="text-2xl mb-1">😊</div>
+          <span style="font-family: var(--font-script);" class="text-sm font-medium">Happy Moments</span>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 7 - Seating Area -->
+      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
+        <img src={gallery7.src} alt="Comfortable Seating Area" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="text-2xl mb-1">🪑</div>
+          <span style="font-family: var(--font-script);" class="text-sm font-medium">Cozy Seating</span>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 8 - Community -->
+      <div class="relative aspect-square rounded-2xl shadow-cafe overflow-hidden group">
+        <img src={gallery8.src} alt="Community Gathering at Tugang Cafe" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="text-2xl mb-1">🤝</div>
+          <span style="font-family: var(--font-script);" class="text-sm font-medium">Community Hub</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

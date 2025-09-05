@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  /* TUGANG CAFE BRAND COLORS */
+  /* Primary Brand Colors */
+  --tugang-primary: #8b4513; /* Coffee Brown */
+  --tugang-secondary: #d2691e; /* Chocolate */
+  --tugang-accent: #f4a460; /* Sandy Brown */
+  --tugang-dark: #4a2c17; /* Dark Coffee */
+  --tugang-light: #f5e6d3; /* Cream */
+
+  /* Neutral Palette */
+  --neutral-50: #fafaf9; /* Lightest cream */
+  --neutral-100: #f5f5f4; /* Light cream */
+  --neutral-200: #e7e5e4; /* Warm gray */
+  --neutral-300: #d6d3d1; /* Medium gray */
+  --neutral-400: #a8a29e; /* Gray */
+  --neutral-500: #78716c; /* Dark gray */
+  --neutral-600: #57534e; /* Darker gray */
+  --neutral-700: #44403c; /* Very dark gray */
+  --neutral-800: #292524; /* Almost black */
+  --neutral-900: #1c1917; /* Black */
+
+  /* Coffee Accent Colors */
+  --coffee-bean: #6f4e37; /* Coffee bean */
+  --coffee-roast: #3c2415; /* Dark roast */
+  --coffee-cream: #f7f3e9; /* Coffee cream */
+  --coffee-latte: #deb887; /* Latte color */
+  --coffee-espresso: #2f1b14; /* Espresso */
+
+  /* Warm Tones */
+  --warm-amber: #f59e0b;
+  --warm-orange: #ea580c;
+  --warm-yellow: #eab308;
+  --warm-red: #dc2626;
+
+  /* TYPOGRAPHY */
+  --font-sans: "Inter", "system-ui", sans-serif;
+  --font-script: "Kalam", "Caveat", "Dancing Script", "Brush Script MT", cursive;
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-modern: "Poppins", "Helvetica Neue", sans-serif;
+}
+
+/* Example usage:
+   background-color: var(--tugang-primary);
+   color: var(--tugang-light);
+   font-family: var(--font-sans);
+   font-family: var(--font-serif);
+   color: var(--coffee-bean);
+   background: linear-gradient(135deg, var(--tugang-primary) 0%, var(--tugang-secondary) 100%);
+*/

@@ -1,0 +1,75 @@
+---
+// Import the about image
+import aboutImage from '../assets/about.jpg'
+---
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 style="font-family: var(--font-serif);" class="text-3xl lg:text-4xl font-bold text-tugang-dark mb-4">Our Story</h2>
+      <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+        Where community meets coffee, and every visit feels like coming home
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="space-y-6">
+        <h3 style="font-family: var(--font-serif);" class="text-2xl font-semibold text-tugang-primary mb-4">
+          A Place of Togetherness
+        </h3>
+        <p class="text-neutral-700 leading-relaxed">
+          At Tugang Cafe, we believe that coffee is more than just a beverage—it's a bridge that connects people, 
+          cultures, and communities. Our cozy space in Taguig has become a beloved gathering place where friends 
+          meet, ideas flow, and memories are made over perfectly crafted cups.
+        </p>
+        <p class="text-neutral-700 leading-relaxed">
+          From our signature coffee blends to our extensive selection of milk teas and delicious snacks, 
+          every item on our menu is crafted with care and attention to detail. We source the finest ingredients 
+          and prepare each drink and dish to bring you the ultimate cafe experience.
+        </p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-tugang-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">☕</span>
+            </div>
+            <h4 class="font-semibold text-tugang-dark">Premium Coffee</h4>
+            <p class="text-sm text-neutral-600">Carefully selected beans</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-tugang-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🏠</span>
+            </div>
+            <h4 class="font-semibold text-tugang-dark">Cozy Atmosphere</h4>
+            <p class="text-sm text-neutral-600">Warm and welcoming</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-tugang-light rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">👥</span>
+            </div>
+            <h4 class="font-semibold text-tugang-dark">Community</h4>
+            <p class="text-sm text-neutral-600">Bringing people together</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="rounded-3xl overflow-hidden shadow-cafe-lg">
+          <img 
+            src={aboutImage.src} 
+            alt="Tugang Cafe - Our cozy interior and welcoming atmosphere" 
+            class="w-full h-[500px] lg:h-[600px] object-cover"
+          />
+          <!-- Optional overlay with cafe info -->
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+            <div class="text-white text-center">
+              <h4 style="font-family: var(--font-script);" class="text-2xl mb-2">Experience the Warmth</h4>
+              <p class="text-sm opacity-90">Where every cup is a celebration of togetherness</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,59 @@
+---
+// Import the hero background image and logo
+import hero1 from '../assets/hero1.jpg'
+import logo from '../assets/favicon.png'
+---
+
+<!-- Hero Section -->
+<section id="home" class="min-h-screen relative flex items-center justify-center">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src={hero1.src} alt="Tugang Cafe Interior" class="w-full h-full object-cover" />
+  </div>
+  
+  <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl">
+    <div class="animate-slide-up">
+      <!-- Hero Logo -->
+      <div class="mb-8 flex justify-center">
+        <div class="w-24 h-24 lg:w-32 lg:h-32 drop-shadow-lg">
+          <img src={logo.src} alt="Tugang Cafe Logo" class="w-full h-full object-cover rounded-full shadow-lg border-4 border-white/20" />
+        </div>
+      </div>
+      
+      <h1 style="font-family: var(--font-script);" class="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 text-shadow-lg drop-shadow-xl">
+        Tugang Cafe
+      </h1>
+      <p class="text-xl lg:text-2xl mb-8 text-shadow-lg max-w-2xl mx-auto font-light drop-shadow-md">
+        Every cup is a celebration of togetherness ☕
+      </p>
+      <p class="text-lg lg:text-xl mb-12 text-shadow max-w-3xl mx-auto drop-shadow-md">
+        Experience the perfect blend of premium coffee, warm atmosphere, and genuine community in the heart of Taguig
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#menu" 
+           class="bg-tugang-light text-tugang-dark px-8 py-4 rounded-full font-semibold hover:bg-white hover:shadow-cafe-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-tugang-accent focus:ring-opacity-50"
+           aria-label="View our menu section">
+          View Our Menu
+        </a>
+        <a href="tel:270006233" 
+           class="border-2 border-tugang-light text-tugang-light bg-tugang-dark bg-opacity-30 px-8 py-4 rounded-full font-semibold hover:bg-tugang-light hover:text-tugang-dark hover:border-tugang-light transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-tugang-accent focus:ring-opacity-50"
+           aria-label="Call us to place an order">
+          Order Now
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Floating Coffee Elements -->
+  <div class="absolute top-20 left-10 w-4 h-4 rounded-full animate-float opacity-60 shadow-lg" 
+       style="background-color: var(--coffee-cream);"></div>
+  <div class="absolute top-40 right-20 w-3 h-3 rounded-full animate-float opacity-70 shadow-md" 
+       style="background-color: var(--tugang-light); animation-delay: 1s;"></div>
+  <div class="absolute bottom-40 left-20 w-5 h-5 rounded-full animate-float opacity-50 shadow-lg" 
+       style="background-color: var(--tugang-accent); animation-delay: 2s;"></div>
+  <div class="absolute top-1/3 right-10 w-2 h-2 rounded-full animate-float opacity-40 shadow-sm" 
+       style="background-color: var(--coffee-latte); animation-delay: 0.5s;"></div>
+  <div class="absolute bottom-1/3 left-1/4 w-3 h-3 rounded-full animate-float opacity-35 shadow-md" 
+       style="background-color: var(--warm-amber); animation-delay: 1.5s;"></div>
+</section>
